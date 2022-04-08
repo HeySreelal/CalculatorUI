@@ -1,16 +1,17 @@
-# calculator
+# Calculator UI
 
-Just a Calculator UI
+A simple calculator UI inspired by [Daily UI post by @juliejamolo](https://www.instagram.com/p/CcFMbBHPb8T/) on Instagram.
 
-## Getting Started
+Just thought why not making it into an app? So, just built it and here's the results:
 
-This project is a starting point for a Flutter application.
+<div align="center">
+    <img src="https://raw.githubusercontent.com/HeySreelal/CalculatorUI/main/screenshots/dark.png" width=200>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <img src="https://raw.githubusercontent.com/HeySreelal/CalculatorUI/main/screenshots/light.png" width=200>
+</div>
 
-A few resources to get you started if this is your first Flutter project:
+## ✍️ Note
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+This is just a dummy project, I'm not going to be adding any more features. Anyway, feel free to check out the code and make your or implement more features.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Thank you! ❤️
