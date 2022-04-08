@@ -1,4 +1,4 @@
-import 'package:calculator/components/button.dart';
+import 'package:calculator/components/body.dart';
 import 'package:calculator/components/keypad.dart';
 import 'package:calculator/components/theme_changer.dart';
 import 'package:flutter/material.dart';
@@ -11,21 +11,33 @@ class Home extends StatefulWidget {
 }
 
 class HomeState extends State<Home> {
+  bool _darkTheme = true;
+
+  void changeTheme() {
+    setState(() {
+      _darkTheme = !_darkTheme;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: const ChangeThemeButton(),
+        leading: ChangeThemeButton(
+          onPressed: changeTheme,
+          darkTheme: _darkTheme,
+        ),
       ),
       extendBodyBehindAppBar: true,
-      body: Container(
-        decoration: const BoxDecoration(
+      body: AnimatedContainer(
+        duration: const Duration(milliseconds: 400),
+        decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              Color(0xFF1E1E1E),
-              Color(0xFF666666),
+              _darkTheme ? const Color(0xFF1E1E1E) : const Color(0xFFFFFFFF),
+              _darkTheme ? const Color(0xFF666666) : const Color(0xFFD2D2D2),
             ],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
@@ -33,8 +45,8 @@ class HomeState extends State<Home> {
         ),
         child: Column(
           children: [
-            Expanded(child: Container()),
-            const KeyPad(),
+            CalculatorBody(darkTheme: _darkTheme),
+            KeyPad(darkTheme: _darkTheme),
           ],
         ),
       ),

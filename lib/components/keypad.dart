@@ -2,22 +2,25 @@ import 'package:calculator/components/button.dart';
 import 'package:flutter/material.dart';
 
 class KeyPad extends StatelessWidget {
+  final bool darkTheme;
   const KeyPad({
     Key? key,
+    this.darkTheme = true,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: const BoxDecoration(
-        borderRadius: BorderRadius.only(
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 300),
+      decoration: BoxDecoration(
+        borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(20),
           topRight: Radius.circular(20),
         ),
         gradient: LinearGradient(
           colors: [
-            Color(0xFF383838),
-            Color(0xFF666666),
+            darkTheme ? const Color(0xFF383838) : const Color(0xFFA1A1A1),
+            darkTheme ? const Color(0xFF666666) : const Color(0xFF6C6C6C),
           ],
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
