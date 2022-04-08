@@ -25,9 +25,12 @@ class HomeState extends State<Home> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: ChangeThemeButton(
-          onPressed: changeTheme,
-          darkTheme: _darkTheme,
+        leading: Padding(
+          padding: const EdgeInsets.all(5.0),
+          child: ChangeThemeButton(
+            onPressed: changeTheme,
+            darkTheme: _darkTheme,
+          ),
         ),
       ),
       extendBodyBehindAppBar: true,

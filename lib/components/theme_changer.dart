@@ -23,7 +23,7 @@ class ChangeThemeButton extends StatelessWidget {
         onPressed: onPressed,
         icon: Icon(
           Icons.dark_mode_outlined,
-          size: 28,
+          size: 20,
           color: darkTheme ? Colors.white : Colors.black,
         ),
       ),
